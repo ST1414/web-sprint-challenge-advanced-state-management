@@ -10,12 +10,12 @@ import logger from "redux-logger";
 import "./index.css";
 import App from "./App";
 
-const store = createStore(reducer, applyMiddleware(logger, thunk))
-
 const { worker } = require('./mocks/browser');
 worker.start();
 
 const rootElement = document.getElementById("root");
+
+const store = createStore(reducer, applyMiddleware(logger, thunk));
 
 ReactDOM.render(
     <Provider store={store}>
