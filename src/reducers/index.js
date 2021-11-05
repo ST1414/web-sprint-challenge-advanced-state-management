@@ -5,7 +5,6 @@ export const initialState = {
     smurfs: [],
     isLoading: false,
     error: ''
-
 }
 
 const reducer = (state = initialState, action) => {

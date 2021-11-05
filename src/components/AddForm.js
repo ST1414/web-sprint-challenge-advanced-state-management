@@ -22,7 +22,6 @@ const AddForm = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         if (state.name === "" || state.position === "" || state.nickname === "") {
-            //add in error action
             props.setError('Name, position, and nickname fields are required DUDE!');
         } else {
             setState({...state, id: Date.now().toString()})
